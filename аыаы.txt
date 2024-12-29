@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="windows-1251" />
+	
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="/css/headline.css"/>
+<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+<link rel="stylesheet" type="text/css" href="/css/slider.css"/>
+<link rel="stylesheet" type="text/css" href="/css/content.css"/>
+<link rel="stylesheet" type="text/css" href="/css/out.css"/>
+<link rel="stylesheet" type="text/css" href="/css/in.css"/>
+<link rel="stylesheet" type="text/css" href="/css/in_and_out.css"/>
+<link rel="stylesheet" type="text/css" href="/css/fileIcons.css"/>
+<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+<link rel="stylesheet" type="text/css" href="/css/internal_table_with_without_allocation.css"/>
+<link rel="stylesheet" type="text/css" href="/css/jcarousel/skin.css"/>
+<link rel="stylesheet" type="text/css" href="/css/forms.css"/>
+<link rel="stylesheet" type="text/css" href="/css/abiturient.css"/>
+<link rel="stylesheet" type="text/css" href="/css/mobile.css"/>
+
+	<!--[if lte IE 7]><link rel="stylesheet" href="/css/ie7.css"/><![endif]-->
+	<title>Текущая успеваемость - Сибирский государственный университет путей сообщения</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.25, user-scalable=yes">
+
+    <script>var page_type = 'page';</script>
+    <script>
+	var js_loaded=false;
+	var js_loaded_error_already_showed = false;
+
+	function check_js_loaded(elem){
+		if (js_loaded_error_already_showed) return;
+		if (js_loaded == true) {
+			js_loaded=false;
+			return;
+		}
+		js_loaded_error_already_showed = true;
+		if(window.jQuery) {
+			$.ajax({
+			  url: '/particular/js_error_saver.php?error='+encodeURIComponent('Cant load js file')+'&page_url='+encodeURIComponent(window.location)+'&js_url=&other=',
+			  cache: false
+			});
+		}
+		if ( confirm("Не удалось загрузить все файлы необходимые для работы сайта. Рекомендуется перезагрузить страницу.\n\nПерезагрузить сейчас?") == false ) {return;}
+	    location.reload();
+	}
+</script>
+	<script src="/js/jquery-latest.min.js"></script><script>check_js_loaded()</script>
+	<script src="/js/jquery-migrate-1.4.1.js"></script><script>check_js_loaded()</script>
+	<script src="/js/global.js"></script><script>check_js_loaded()</script>
+	<script src="/js/page_func.js"></script><script>check_js_loaded()</script>
+	<script src="/js/left_menu.js"></script><script>check_js_loaded()</script>
+	<script src="/js/table_func.js"></script><script>check_js_loaded()</script>
+	<script src="/js/sign.js"></script><script>check_js_loaded()</script>
+	<script src="/js/mobile.js"></script><script>check_js_loaded()</script>
+
+	<link rel="stylesheet" type="text/css" href="/lightbox_plus/lightbox.css" media="screen,tv" />
+	<script type="text/javascript" src="/lightbox_plus/lightbox_plus.js"></script><script>check_js_loaded()</script>
+	<script type="text/javascript" src="/js/jquery.qtip-1.0.0-rc3.min.js"></script><script>check_js_loaded()</script>
+
+	<link rel="alternate" type="application/rss+xml" title="Новости Сибирского государственного университета путей сообщения" href="/rss/">
+
+	
+	
+		<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){try{VK.Retargeting.Init("VK-RTRG-977737-5gcQR"),VK.Retargeting.Hit()}catch(e){}},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-977737-5gcQR" style="position:fixed; left:-999px;" alt=""/></noscript>
+		
+</head>
+<body>
+	<div id="page_text_horiz_scroll"><div></div></div>
+
+    <div id="mobile_version"></div>
+    <div id="folder" style="display:none">education</div>
+
+    <div id="fullscreen_menu_container">
+        <div>
+            <div class="menu_close" src="/design/help_for_abiturient_close_button.png" title="Закрыть меню"></div>
+	    </div>
+    </div>
+
+	<div id="main_wrap">
+		<div id="page">
+			<div id="wrap">
+				<header>
+					<!--<div style="background-color: #f00; color: #fff;text-align: center; padding: 0.5em; font-size: 120%;" id="test_site_alert">
+<img src="/design/help_for_abiturient_close_button.png" title="Закрыть" alt="Закрыть" width="45" height="45" style="float: right; cursor: pointer;" onclick="$('#test_site_alert').hide();">
+Из-за технических проблем часть страниц сайта недоступна. Ориентировочное время возобновления работы всего функционала сайта - понедельник 10.06.2024.<br/>
+<a href="http://www.stu.ru" style="color: #fff; font-weight: bold; text-decoration: underline;">Перейти на основной сайт СГУПС www.stu.ru</a>
+</div>-->
+<!--[help_for_abiturient]-->
+
+<!--[postupaem_window]-->
+<!--[obyasnyaem_window]-->
+<!--[vibori_window]-->
+<div id="he">
+	<div>
+		
+		<div id="he-day">
+			<span id="weather">&minus;2°</span>Сегодня суббота, <span style="white-space: nowrap;">16.11.2024, 1-я учебная неделя</span>
+<!--
+			<div id="pk_string">
+				<a href="/abiturient/index.php?page=3363">Приёмная комиссия</a> <a href="tel:+73833280585">+7-383-328-05-85</a>, <a href="tel: +79930230111" target="_blank">+7-993-023-01-11</a>
+				<span style="white-space: nowrap;">
+				<a href="mailto:pk@sgups.stu.ru">pk@sgups.stu.ru</a>,
+				<a href="https://vk.com/pksgups" target="_blank">ВК</a>,
+				<a href="https://t.me/pcstu" target="_blank">ТГ</a>
+				</span>
+			</div>-->
+			<!--<a href="tel:+73833280306">328-03-06</a>,-->
+
+		</div>
+		<div id="he-links">
+			<span itemprop="copy"><a href="/cecutient" title="Версия для слабовидящих" style="white-space: nowrap;" onclick="go_cecutient_href(this);return false;"><img src="/images/cecutient/cecutient.png" height="20" alt="Версия для слабовидящих"/>Версия&nbsp;для&nbsp;слабовидящих</a></span>
+			    <span class="mobile_hide_get_href"><a href="/about/index.php?page=3097" title="Филиалы">Филиалы</a></span>
+			    <a href="/site_tree/" title="Карта сайта">Карта&nbsp;сайта</a>
+			    <a href="/abiturient/index.php?page=3258" title="Enrollee" style="color: #fffbee">Enrollee</a>
+        	<span style="white-space: nowrap;">
+			    <a href="/en/greeting/" title="English version">English</a>
+			    <form style="margin: 0 0 0 20px; display: inline;" action="/search" method="get" name="searchform" enctype="multipart/form-data"><input required="" style="text-align:right; height:0.9em; font-size: 0.85em;" id="searchfield" type="text" role="search" aria-label="Поиск по сайту" size="24" name="search" value="Поиск по сайту" onfocus="this.value='';this.style.textAlign='left';"  onBlur="this.value='Поиск по сайту';this.style.textAlign='right';"></form>
+			</span>
+		</div>
+	</div>
+</div>
+
+<script>
+      	// показать верхушку
+        if ( page_type == 'main' || document.location.href.indexOf('/en/')>-1)	$("#he").show();
+</script>
+								<div id="header">
+				<div>
+					
+					<a id="logo" href="/" title="Сибирский государственный университет путей сообщения"></a>
+					
+					<a id="logo_text" href="/" title="Сибирский государственный университет путей сообщения">Сибирский государственный университет путей сообщения</a>
+					<nav id="nav">
+						<div class="navMenu navMenuCol1">
+							<a href="/sveden" class="about_href" title="Сведения об образовательной организации" pos="1">Сведения об образовательной<br/>организации</a>
+							<br /><a href="/education/" title="Учебная деятельность">Учебная деятельность</a>
+						</div>
+						<div class="navMenu navMenuCol2">
+							<br /><a href="http://ipk.stu.ru/" title="Повышение квалификации">Повышение квалификации</a>
+							<br /><a href="/science/" title="Научная деятельность">Научная деятельность</a>
+						</div>
+						<div class="navMenu navMenuCol3">
+							<br /><a href="/life/" title="Университетская жизнь">Университетская жизнь</a>
+							<br /><a href="/international/" title="Международное сотрудничество">Международное сотрудничество</a>
+						</div>
+						<div class="navMenu navMenuCol4">
+							<br/><span class="a_clone">&nbsp;</span>
+							<br/><a href="/about/employment" title="Трудоустройство">Трудоустройство</a>
+						</div>
+						<div class="navMenu navMenuCol5">
+							<br /><a href="/abiturient/" class="ab" title="Абитуриентам" pos="2">Абитуриентам</a>
+							<br /><a href="/info/" title="Справочные ресурсы">Справочные ресурсы</a>
+						</div>
+						<div class="clear"></div>
+					</nav>
+					<nav id="mobile_menu_wrapper">
+	<div aria-haspopup="true" id="mobile_menu_button" aria-controls="mobile_menu_body">
+	</div>
+
+	<div id="mobile_menu_body" aria-labelledby="mobile_menu_button">
+
+	    <div class="triangle1">
+	    </div>
+	    <div class="triangle2">
+	    </div>
+	    <div class="menu_content">
+		    <ul>
+		    </ul>
+
+	    </div>
+	</div>
+</nav>
+
+<script>
+    $("#mobile_menu_button").click(function(){
+        $("#mobile_menu_body").toggle();
+   	   	$('#page_text').css('min-height', $('.menu_content').outerHeight() );
+        $("#mobile_menu_body .level_1").hide();
+    });
+	$(document).click(function(event) {
+	  if ($(event.target).closest("#mobile_menu_button, #mobile_menu_body").length) return;
+	  $("#mobile_menu_body").hide();
+	  event.stopPropagation();
+	});
+
+    //$("#mobile_menu_body").toggle();
+    /*
+    $(".level_0").click(function(){
+        var parent = $(this).parent();
+        $("#mobile_menu_body .level_1:not(:has(.open))").hide();
+        cur_elem = $(".level_1", parent);
+        if ( cur_elem.hasClass("open") ){
+            cur_elem.removeClass("open");
+            cur_elem.hide();
+        } else {
+            cur_elem.addClass("open");
+            cur_elem.show();
+        }
+    });
+    */
+</script>
+				</div>
+			</div>
+				</header>
+				<div id="content1300">
+					<div class="content_wrap">
+						<div id="menuContainer">
+							<nav aria-level="2" class="menuNav">
+								<div class="menuNav0"><a class="menuNav_href" href="/" >Главная</a></div><div class="menuNav1 menuNavArrowDown current_branch"><a class="menuNav_href" href="/education/index.php?page=2" >Учебная деятельность</a></div><div class="menuNav2 has_page"><a class="menuNav_href" href="/education/index.php?page=33" >Общая информация</a></div><div class="menuNav2 menuNavArrowRight"><a class="menuNav_href" href="/education/index.php?page=32" >Факультеты</a></div><div class="menuNav2 menuNavArrowRight"><a class="menuNav_href" href="/education/index.php?page=35" >Кафедры</a></div><div class="menuNav2 href_setted has_page no_ajax_load"><a class="menuNav_href" href="/about/index.php?page=2408" >Направления и специальности</a></div><div class="menuNav2 href_setted has_page"><a class="menuNav_href" href="/education/raspisanie" >Расписание занятий</a></div><div class="menuNav2 menuCheck href_setted has_page"><a class="menuNav_href" href="/education/rating.php" >Текущая успеваемость</a></div><div class="menuNav2 has_page"><a class="menuNav_href" href="/education/index.php?page=2720" >Выпускные квалификационные работы</a></div><div class="menuNav2 has_page"><a class="menuNav_href" href="/education/index.php?page=2702" >Портфолио</a></div><div class="menuNav2 href_setted has_page no_ajax_load"><a class="menuNav_href" href="/abiturient/" >Поступающим</a></div><div class="menuNav2 menuNavArrowRight"><a class="menuNav_href" href="/education/index.php?page=736" >Довузовское образование</a></div><div class="menuNav2 menuNavArrowRight"><a class="menuNav_href" href="/education/index.php?page=2715" >PRO СГУПСlife</a></div><div class="menuNav2 href_setted has_page no_ajax_load"><a class="menuNav_href" href="/life/index.php?page=3401" >Памятка первокурснику</a></div><div class="menuNav2 menuNavArrowRight"><a class="menuNav_href" href="/education/index.php?page=1181" >Учебно-лабораторная база СГУПСа</a></div><div class="menuNav2 href_setted has_page no_ajax_load"><a class="menuNav_href" href="/info/index.php?page=3319" >Электронно - образовательные ресурсы</a></div><div class="menuNav2 href_setted has_page no_ajax_load"><a class="menuNav_href" href="http://library.stu.ru/" >Научно-техническая библиотека</a></div>
+							</nav>
+							<div class="menuNav_layer0"></div>
+						</div>
+						<div id="content-text">
+							<div id="content-section">
+								<img src="/images/upper_pics/section2.png" alt="Фотография раздела" style="width:100%;min-width:1050px"/>
+							</div>
+
+                            <div class="mobile_local_menu_button"><span data-open="Меню раздела &#9660;" data-close="Меню раздела &#9650;">Меню раздела &#9650;</span></div>
+                            <div class="mobile_local_menu_button_placeholder"></div>
+						    <!--сюда положим меню когда сайт меньше 1000 -->
+						    <div id="mobile_block_left_menu"><div><div></div></div></div>
+						    <!---->
+
+							<main id="text" class="add_file_icons">
+		                        <div id="wide_screen" style="display: none;"></div>
+		   						<div id="path"><a href="/" title="Главная">Главная</a>
+ > <a href="/education/index.php?page=2" title="Учебная деятельность">Учебная деятельность</a>
+</div>
+		                        <div id="page_id">0</div>
+								<H1 id="page_name">Текущая успеваемость</H1>
+								<div id="page_text_container" style="position: relative">
+									<div id="page_text"><div>
+<link rel="stylesheet" type="text/css" href="/js/datetime_picker/jquery.datetimepicker.css"/ >
+<script src="/js/datetime_picker/jquery.datetimepicker.full.min.js"></script>
+
+<br/>Обращаем ваше внимание, что информация по текущей успеваемости обновляется <B>с привязкой к контрольным срокам</B>, утвержденным руководством университета. <br/><br/>Данные по очередному семестру <B>БУДУТ НЕДОСТУПНЫ</B> до даты первого контрольного срока <U>включительно</U>.<br/><br/><div class="spoiler"><div class="spoiler_title plus_img_left">Информация по датам контрольных сроков</div><div class="spoiler_text"><br/>Выписка из <B>Распоряжения №80 от 06 сентября 2024 г.</B><br/><br/>1. Контрольными сроками для анализа текущей успеваемости и посещаемости студентов <b>очной формы</b> обучения считать:<br/><br/><table class="itwoa"><tr><th width="50%">Бакалавры, магистры</th><th width="25%">1,2,3,4 курс</th><th>Профили и программы со сроком семестра до 14 нед</th></tr><tr><td>Контрольный срок 1</td><td>14.10.2024</td><td>14.10.2024</td></tr><tr><td>Контрольный срок 2</td><td>18.11.2024</td><td>02.12.2024</td></tr><tr><td>Контрольный срок 3</td><td>23.12.2024</td><td>-</td></tr></table><br/><table class="itwoa"><tr><th width="50%">Специалисты</th><th width="25%">1,2,3,4,5 курс</th><th>ММ 5 курс</th></tr><tr><td>Контрольный срок 1</td><td>14.10.2024</td><td>14.10.2024</td></tr><tr><td>Контрольный срок 2</td><td>18.11.2024</td><td>02.12.2024</td></tr><tr><td>Контрольный срок 3</td><td>23.12.2024</td><td>03.02.2025</td></tr></table><br/><br/>2. Контрольными сроками для анализа текущей успеваемости и посещаемости студентов <b>очно-заочной формы</b> обучения считать:<br/><br/><table class="itwoa"><tr><th width="50%">Бакалавры</th><th width="25%">1 курс</th><th>2,3,4 курс</th></tr><tr><td>Контрольный срок 1</td><td>21.10.2024</td><td>14.10.2024</td></tr><tr><td>Контрольный срок 2</td><td>25.11.2024</td><td>18.11.2024</td></tr><tr><td>Контрольный срок 3</td><td>13.01.2025</td><td>23.12.2024</td></tr></table><br/><table class="itwoa"><tr><th width="50%">Магистры (УПМ)</th><th width="25%">1 курс</th><th>2 курс</th></tr><tr><td>Контрольный срок 1</td><td>14.10.2024</td><td>14.10.2024</td></tr><tr><td>Контрольный срок 2</td><td>18.11.2024</td><td>02.12.2024</td></tr><tr><td>Контрольный срок 3</td><td>23.12.2024</td><td>-</td></tr></table></div></div><br/>
+<div>
+	<form class="forms" method="post" action="/education/rating.php?mode_view=1" name="frm">
+		<br/>
+		<b>Введите данные студента:</b><br/>
+		<table>
+			<tr><td>Фамилия: </td><td><input type="text" name="familiya_form" required value="%C2%EB%E0%F1%EE%E2%E0"/></td></tr>
+			<tr><td>Группа: </td><td><input type="text" name="gruppa_form" required value="%CC%CB-411"/></td></tr>
+			<tr><td>Дата рождения: </td><td><input type="text" name="birth_date_form" required value="04.09.2003" class="datetimepicker" placeholder="ДД.ММ.ГГГГ"/></td></tr>
+        </table>
+		<input type="submit" value="Смотреть успеваемость" />
+	</form>
+</div>
+
+
+<script>
+$(document).ready(function(){
+	refresh_data();
+});
+function refresh_data(){
+
+	if (typeof mobile_version == 'boolean' && mobile_version==true) {
+
+		$('[name="birth_date_form"]').attr('type', 'date');
+
+	} else {
+
+		$.datetimepicker.setLocale('ru');
+		$('.datetimepicker').datetimepicker({
+			timepicker:false,
+			format:'d.m.Y',
+			dayOfWeekStart: 1
+		});
+	}
+}
+
+</script>
+
+
+</div></div>
+									<div id="horiz_slider_blue_shadow_left">
+										<div class="horiz_slider_arrow_left"></div>
+									</div>
+									<div id="horiz_slider_blue_shadow_right">
+										<div class="horiz_slider_arrow_right"></div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div id="last_update_date"></div>
+								<div id="share"><div class="share_block" style="float:right;margin-bottom:3px;">
+	Поделиться:
+		<div style="opacity: 0.93">
+		<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+		<div id="ya-share2" class="ya-share2" data-services="vkontakte,odnoklassniki,moimir,lj,whatsapp,telegram"></div>   <!-- facebook, gplus, twitter -->
+	</div>
+</div>
+
+</div>
+								<div class="clear"></div>
+							</main>
+						</div>
+						<div class="clear"></div>
+			        </div>
+				</div>
+			</div>
+		</div>
+    	<footer>
+			<div id="footer">
+		<div class="width1000">
+			<div class="footerMenu col1">
+				<a href="/about" class="footerSection" title="Сведения об образовательной организации">Сведения об образовательной организации</a>
+				<ul>
+					<li><a href="/about/index.php?page=3091" title="Общая информация">Общая информация</a></li><li><a href="/sveden/common" title="Основные сведения">Основные сведения</a></li><li><a href="/sveden/struct" title="Структура и органы управления образовательной организацией">Структура и органы управления образовательной организацией</a></li><li><a href="/sveden/document" title="Документы">Документы</a></li><li><a href="/sveden/education" title="Образование">Образование</a></li><li><a href="/sveden/eduStandarts" title="Образовательные стандарты и требования">Образовательные стандарты и требования</a></li><li><a href="/sveden/managers" title="Руководство">Руководство</a></li><li><a href="/sveden/employees" title="Педагогический (научно-педагогический) состав">Педагогический (научно-педагогический) состав</a></li><li><a href="/sveden/objects" title="Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда">Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда</a></li><li><a href="/sveden/grants" title="Стипендии и меры поддержки обучающихся">Стипендии и меры поддержки обучающихся</a></li><li><a href="/about/employment" title="Трудоустройство">Трудоустройство</a></li><li><a href="/sveden/paid_edu" title="Платные образовательные услуги">Платные образовательные услуги</a></li><li><a href="/sveden/budget" title="Финансово - хозяйственная деятельность">Финансово - хозяйственная деятельность</a></li><li><a href="/sveden/vacant" title="Вакантные места для приема (перевода) обучающихся">Вакантные места для приема (перевода) обучающихся</a></li><li><a href="/about/index.php?page=809" title="Политика в области качества">Политика в области качества</a></li><li><a href="/about/index.php?page=2466" title="Противодействие коррупции">Противодействие коррупции</a></li><li><a href="/sveden/inter" title="Международное сотрудничество">Международное сотрудничество</a></li><li><a href="/sveden/catering" title="Организация питания в образовательной организации">Организация питания в образовательной организации</a></li>
+				</ul>
+			</div>
+			<div class="footerMenu col2">
+				<a href="/education" class="footerSection" title="Учебная деятельность">Учебная деятельность</a>
+				<ul>
+                	<li><a href="/education/index.php?page=33" title="Общая информация">Общая информация</a></li><li><a href="/education/index.php?page=32" title="Факультеты">Факультеты</a></li><li><a href="/education/index.php?page=35" title="Кафедры">Кафедры</a></li><li><a href="/about/index.php?page=2408" title="Направления и специальности">Направления и специальности</a></li><li><a href="/education/raspisanie" title="Расписание занятий">Расписание занятий</a></li><li><a href="/education/rating.php" title="Текущая успеваемость">Текущая успеваемость</a></li><li><a href="/education/index.php?page=2720" title="Выпускные квалификационные работы">Выпускные квалификационные работы</a></li><li><a href="/education/index.php?page=2702" title="Портфолио">Портфолио</a></li><li><a href="/abiturient/" title="Поступающим">Поступающим</a></li><li><a href="/education/index.php?page=736" title="Довузовское образование">Довузовское образование</a></li><li><a href="/education/index.php?page=2715" title="PRO СГУПСlife">PRO СГУПСlife</a></li><li><a href="/life/index.php?page=3401" title="Памятка первокурснику">Памятка первокурснику</a></li><li><a href="/education/index.php?page=1181" title="Учебно-лабораторная база СГУПСа">Учебно-лабораторная база СГУПСа</a></li><li><a href="/info/index.php?page=3319" title="Электронно - образовательные ресурсы">Электронно - образовательные ресурсы</a></li><li><a href="http://library.stu.ru/" title="Научно-техническая библиотека">Научно-техническая библиотека</a></li>
+				</ul>
+			</div>
+			<div class="footerMenu col3">
+				<a href="/science" class="footerSection" title="Научная деятельность">Научная деятельность</a>
+				<ul>
+					<li><a href="/science/index.php?page=84" title="Общая информация">Общая информация</a></li><li><a href="/science/index.php?page=705" title="Направления научной деятельности">Направления научной деятельности</a></li><li><a href="/science/index.php?page=3433" title="Публикации">Публикации</a></li><li><a href="/science/index.php?page=3347" title="Конференции">Конференции</a></li><li><a href="/science/index.php?page=61" title="Структура УНИР">Структура УНИР</a></li><li><a href="/science/index.php?page=1055" title="Научные подразделения СГУПС">Научные подразделения СГУПС</a></li><li><a href="/science/index.php?page=3500" title="Регистрация РИД">Регистрация РИД</a></li><li><a href="/science/index.php?page=63" title="Научно-исследовательская работа студентов (НИРС)">Научно-исследовательская работа студентов (НИРС)</a></li><li><a href="/science/index.php?page=62" title="Докторантура и аспирантура">Докторантура и аспирантура</a></li><li><a href="/science/index.php?page=60" title="Диссертационные советы">Диссертационные советы</a></li><li><a href="/science/index.php?page=810" title="Научные разработки">Научные разработки</a></li><li><a href="/science/index.php?page=1540" title="Инновационные структуры СГУПС">Инновационные структуры СГУПС</a></li><li><a href="http://science.stu.ru/page.php?id=92" title="Сотрудничество с ОАО «РЖД»">Сотрудничество с ОАО «РЖД»</a></li><li><a href="http://science.stu.ru" title="Научно-инновационный портал">Научно-инновационный портал</a></li><li><a href="/science/index.php?page=487" title="Издательство">Издательство</a></li><li><a href="/science/index.php?page=2470" title="Журнал «Вестник СГУПС»">Журнал «Вестник СГУПС»</a></li><li><a href="http://neweconomy.online/ru/" title="Журнал «Вопросы новой экономики»">Журнал «Вопросы новой экономики»</a></li><li><a href="/science/index.php?page=2865" title="Журнал «Вестник СГУПС: Гуманитарные исследования»">Журнал «Вестник СГУПС: Гуманитарные исследования»</a></li><li><a href="https://fpvt.ru/" title="Журнал «Фундаментальные и прикладные вопросы транспорта»">Журнал «Фундаментальные и прикладные вопросы транспорта»</a></li><li><a href="/science/index.php?page=3150" title="Информация о переходящих призах по итогам НИР и НИРС">Информация о переходящих призах по итогам НИР и НИРС</a></li><li><a href="/science/index.php?page=3267" title="Конкурс на замещение должностей научных работников">Конкурс на замещение должностей научных работников</a></li>
+				</ul>
+			</div>
+			<div class="footerMenu col4">
+				<a href="/international" class="footerSection" title="Международная деятельность">Международная деятельность</a>
+				<ul>
+					<li><a href="/international/index.php?page=3458" title="Приоритетные направления сотрудничества">Приоритетные направления сотрудничества</a></li><li><a href="/international/index.php?page=3439" title="Страны">Страны</a></li><li><a href="/international/index.php?page=3446" title="Экспорт образовательных услуг">Экспорт образовательных услуг</a></li><li><a href="/international/index.php?page=3447" title="Совместные образовательные программы">Совместные образовательные программы</a></li><li><a href="/international/index.php?page=3449" title="Международная научно-исследовательская деятельность (конференции, профессиональные стажировки)">Международная научно-исследовательская деятельность (конференции, профессиональные стажировки)</a></li><li><a href="/international/index.php?page=3448" title="Академическая мобильность">Академическая мобильность</a></li><li><a href="/international/index.php?page=3450" title="Внеучебная деятельность">Внеучебная деятельность</a></li><li><a href="/international/index.php?page=3451" title="Условия поступления и обучения">Условия поступления и обучения</a></li><li><a href="/international/index.php?page=3456" title="ВАЖНОЕ">ВАЖНОЕ</a></li><li><a href="/international/news/index.php?page=3508&podrazd=mezd" title="Новости">Новости</a></li><li><a href="/international/index.php?page=3452" title="Отзывы иностранных студентов о СГУПС">Отзывы иностранных студентов о СГУПС</a></li>
+				</ul>
+			</div>
+			<div class="footerMenu col5">
+				<a href="/life" class="footerSection" title="Университетская жизнь">Университетская жизнь</a>
+				<ul>
+					<li><a href="/news/index.php" title="Новости университета">Новости университета</a></li><li><a href="/announ/index.php" title="Объявления университета">Объявления университета</a></li><li><a href="/news/index.php?page=3744&podrazd=newsRussia" title="Новости России">Новости России</a></li><li><a href="/life/help_for_student.php" title="В помощь студенту">В помощь студенту</a></li><li><a href="/life/index.php?page=74" title="Воспитательная работа">Воспитательная работа</a></li><li><a href="/life/index.php?page=1129" title="Cоциальная сфера">Cоциальная сфера</a></li><li><a href="/life/index.php?page=3062" title="Охрана здоровья">Охрана здоровья</a></li><li><a href="/life/index.php?page=465" title="Спортивная жизнь">Спортивная жизнь</a></li><li><a href="/life/index.php?page=1133" title="Учебный спортивно-оздоровительный комплекс">Учебный спортивно-оздоровительный комплекс</a></li><li><a href="http://ds.stu.ru/photo" title="Фотогалерея">Фотогалерея</a></li><li><a href="/life/index.php?page=2026" title="Студенты о СГУПСе">Студенты о СГУПСе</a></li><li><a href="/life/index.php?page=463" title="СМИ о СГУПСе">СМИ о СГУПСе</a></li><li><a href="/emailer/" title="Рассылка новостей и объявлений">Рассылка новостей и объявлений</a></li><li><a href="/life/index.php?page=1624" title="Опросы">Опросы</a></li><li><a href="/broadcast" title="Видеотрансляции">Видеотрансляции</a></li><li><a href="/life/index.php?page=2501" title="Противодействие экстремизму и терроризму">Противодействие экстремизму и терроризму</a></li><li><a href="/life/index.php?page=3768" title="Противодействие мошенничеству">Противодействие мошенничеству</a></li><li><a href="/life/index.php?page=3303" title="Правовое просвещение">Правовое просвещение</a></li><li><a href="/life/index.php?page=3316" title="Поздравления">Поздравления</a></li><li><a href="/life/index.php?page=3551" title="Тематические подборки новостей">Тематические подборки новостей</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footerContacts">
+			<div style="margin: 0.5em 6px 1em 6px;"><a href="/info/form_mail.php?question_theme=uinf" style="text-transform: none;color:#ddd">Связаться с администрацией сайта</a></div>
+			<div id="footerName">Федеральное государственное бюджетное<br />образовательное учреждение высшего образования <br />Сибирский государственный университет путей сообщения</div>
+			<div id="footerVisits"></div>
+			<div class="clear"></div>
+		</div>
+</div>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25279493 = new Ya.Metrika({id:25279493,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/25279493" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+		</footer>
+	</div>
+</body>
+</html>
