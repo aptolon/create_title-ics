@@ -1,0 +1,3 @@
+([('composition',
+   '/Users/admin/работа/create_title-ics/dist/composition',
+   'EXECUTABLE')],)

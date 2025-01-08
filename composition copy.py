@@ -1,13 +1,19 @@
+import os
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from openpyxl import load_workbook
 from PIL import Image, ImageTk
-
+from docxtpl import DocxTemplate
+from docx2pdf import convert
+from reportlab.pdfgen import canvas
+from PyPDF2 import PdfReader, PdfWriter
+from io import BytesIO
+import fitz
 class ProjectInfoApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Состав проекта")
-        self.root.geometry("800x500")
+        self.root.geometry("950x710")
 
         self.filepath = ""
         self.customer = tk.StringVar()
@@ -33,6 +39,7 @@ class ProjectInfoApp:
 
         # Initially display the file selection tab
         self.create_file_selection_page()
+        
 
     def create_file_selection_page(self):
         # Clear tab content and create content for file selection
@@ -57,8 +64,8 @@ class ProjectInfoApp:
         customer_entry.pack(anchor="w", pady=5)
 
         tk.Label(left_frame, text="Наименование проекта:").pack(anchor="w")
-        project_name_entry = tk.Entry(left_frame, textvariable=self.project_name, width=60)
-        project_name_entry.pack(anchor="w", pady=5)
+        self.project_name_entry = tk.Entry(left_frame, textvariable=self.project_name, width=60)
+        self.project_name_entry.pack(anchor="w", pady=5)
 
         # New fields
         tk.Label(left_frame, text="Шифр проекта:").pack(anchor="w")
@@ -85,8 +92,12 @@ class ProjectInfoApp:
         btn_select_image = tk.Button(left_frame, text="Выберите изображение", command=self.load_image_path)
         btn_select_image.pack(pady=10, anchor="w")
 
+
+
         btn_save = tk.Button(left_frame, text="Сохранить", command=self.save_to_excel)
         btn_save.pack(pady=10, anchor="w")
+        btn_select_image = tk.Button(left_frame, text="Пример титула", command=self.overlay_text_on_image)
+        btn_select_image.pack(pady=10, anchor="w")
 
 
         # Right Frame (Image Display)
@@ -134,6 +145,9 @@ class ProjectInfoApp:
 
         btn_select_pdf = tk.Button(left_frame, text="Выберите pdf файл", command=self.load_pdf_file)
         btn_select_pdf.pack(pady=10, anchor="w")
+
+        btn_create_word_documents = tk.Button(left_frame, text="Создать Word документы", command=self.create_word_documents)
+        btn_create_word_documents.pack(anchor="w", pady=10)
 
         # Predefined fields
         fields = ["Номер тома", "Обозначение", "Наименование", "Примечание"]
@@ -266,7 +280,7 @@ class ProjectInfoApp:
         for widget in tab.winfo_children():
             widget.destroy()
     def load_image_path(self):
-        file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg;*.png")])
+        file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg"), ("Image files", "*.png")])
         if file_path:
             self.image_path.set(file_path)
             self.load_image()
@@ -330,6 +344,7 @@ class ProjectInfoApp:
             sheet = workbook.worksheets[0]  # Access the first sheet
             self.customer.set(sheet["A2"].value or "")
             self.project_name.set(sheet["B2"].value or "")
+
             self.image_path.set(sheet["C2"].value or "")
             self.project_code.set(sheet["D2"].value or "")
             self.ceo.set(sheet["E2"].value or "")
@@ -338,19 +353,88 @@ class ProjectInfoApp:
             self.year_of_development.set(sheet["H2"].value or "")
         except Exception as e:
             messagebox.showerror("Ошибка", f"Ошибка при чтении файла: {e}")
+            print(e)
 
     def load_image(self):
         try:
             if self.image_path.get():
                 img = Image.open(self.image_path.get())
-                img = img.resize((310, 438), Image.LANCZOS)
+                img = img.resize((465, 657), Image.LANCZOS)
                 img = ImageTk.PhotoImage(img)
                 self.image_panel.config(image=img)
                 self.image_panel.image = img
         except Exception as e:
             messagebox.showerror("Ошибка", f"Ошибка при загрузке изображения: {e}")
+    def overlay_text_on_image(self):
+        output_path_docx = "temptitle.docx"
+        output_path_pdf = "temptitle.pdf"
+        output_path_png = "temptitle.png"
+
+        try:
+            doc = DocxTemplate("титул_шаблон_пример.docx")
+
+            replacements = {
+                'Заказчик': self.customer.get(),
+                'Наименование': self.project_name.get(),
+                'Шифр': self.project_code.get(),
+                'Директор': self.ceo.get(),
+                'Инженер': self.project_engineer.get(),
+                'Город': self.city.get(),
+                'Год': self.year_of_development.get()
+            }
+
+            doc.render(replacements)
+            doc.save(output_path_docx)
+
+            convert(output_path_docx, output_path_pdf)
+
+            reader = PdfReader(output_path_pdf)
+            writer = PdfWriter()
+            page = reader.pages[0]
+
+            page_width = float(page.mediabox.width)
+            page_height = float(page.mediabox.height)
+
+            if self.image_path.get():
+                packet = BytesIO()
+                c = canvas.Canvas(packet, pagesize=(page_width, page_height))
+                c.drawImage(self.image_path.get(), 0, 0, width=page_width, height=page_height)
+                c.save()
+                packet.seek(0)
+
+                background_pdf = PdfReader(packet)
+                background_page = background_pdf.pages[0]
+                background_page.merge_page(page)
+                writer.add_page(background_page)
+            else:
+                writer.add_page(page)
+
+            with open(output_path_pdf, "wb") as f:
+                writer.write(f)
+
+            pdf_document = fitz.open(output_path_pdf)
+            for page_number in range(len(pdf_document)):
+                page = pdf_document.load_page(page_number)
+                pix = page.get_pixmap()
+                pix.save(output_path_png)
+
+            img = Image.open(output_path_png)
+            img = img.resize((465, 657), Image.LANCZOS)
+            img = ImageTk.PhotoImage(img)
+            self.image_panel.config(image=img)
+            self.image_panel.image = img
+
+        finally:
+            for temp_file in [output_path_docx, output_path_pdf, output_path_png]:
+                try:
+                    if os.path.exists(temp_file):
+                        os.remove(temp_file)
+                except Exception as e:
+                    print(f"Не удалось удалить {temp_file}: {e}")
+
 
     def populate_fields_from_selection(self, event):
+        
         selected_value = self.dynamic_combobox.get()
         
         if selected_value:
@@ -409,6 +493,10 @@ class ProjectInfoApp:
                 self.dynamic_combobox.current(0)  # Set to first item if there are values
         except Exception as e:
             messagebox.showerror("Ошибка", f"Ошибка при обновлении списка: {e}")
+
+    def create_word_documents(self):
+        pass
 root = tk.Tk()
 app = ProjectInfoApp(root)
 root.mainloop()
+
